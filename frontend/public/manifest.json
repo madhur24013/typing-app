@@ -1,0 +1,86 @@
+{
+  "short_name": "TypeShala",
+  "name": "TypeShala - Typing Practice App",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "scope": "/",
+  "description": "Improve your typing speed and accuracy with TypeShala",
+  "categories": ["education", "productivity"],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "TypeShala Dashboard"
+    },
+    {
+      "src": "screenshot2.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "TypeShala Mobile View"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Start Typing",
+      "short_name": "Practice",
+      "description": "Start a new typing practice session",
+      "url": "/practice",
+      "icons": [{ "src": "practice.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "View Streaks",
+      "short_name": "Streaks",
+      "description": "Check your typing streaks and achievements",
+      "url": "/streaks",
+      "icons": [{ "src": "streaks.png", "sizes": "192x192" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
+  "lang": "en-US",
+  "dir": "ltr",
+  "dir_auto": true,
+  "display_override": ["window-controls-overlay"],
+  "handle_links": "preferred",
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "auto"]
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "share_target": {
+    "action": "/share-target",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+} 

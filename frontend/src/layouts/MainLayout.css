@@ -1,0 +1,413 @@
+/* MainLayout.css */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.app-header {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.app-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3B82F6;
+}
+
+/* Main Navigation */
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  margin: 0 1rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #4B5563;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  display: block;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  color: #3B82F6;
+}
+
+.main-nav li.active a {
+  color: #3B82F6;
+}
+
+.main-nav li.active a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3B82F6;
+}
+
+/* Header Right */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* User Menu */
+.user-menu-wrapper {
+  position: relative;
+}
+
+.user-menu-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.user-menu-button:hover {
+  background-color: #F3F4F6;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  background-color: #3B82F6;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.user-name {
+  font-weight: 500;
+  color: #1F2937;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  z-index: 50;
+  display: none;
+}
+
+.user-menu-wrapper:hover .user-dropdown {
+  display: block;
+}
+
+.user-dropdown ul {
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.user-dropdown li {
+  padding: 0;
+}
+
+.user-dropdown a, .user-dropdown button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #4B5563;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.user-dropdown a:hover, .user-dropdown button:hover {
+  background-color: #F3F4F6;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+.menu-divider {
+  height: 1px;
+  background-color: #E5E7EB;
+  margin: 0.5rem 0;
+}
+
+.logout-button {
+  color: #DC2626 !important;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-login {
+  color: #3B82F6;
+  background-color: transparent;
+  border: 1px solid #3B82F6;
+}
+
+.btn-login:hover {
+  background-color: #EFF6FF;
+}
+
+.btn-signup {
+  color: white;
+  background-color: #3B82F6;
+  border: 1px solid #3B82F6;
+}
+
+.btn-signup:hover {
+  background-color: #2563EB;
+  border-color: #2563EB;
+}
+
+/* Main Content */
+.app-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #F9FAFB;
+}
+
+/* Footer */
+.app-footer {
+  background-color: #1F2937;
+  color: #E5E7EB;
+  padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.footer-section h4 {
+  color: white;
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.footer-section p {
+  color: #9CA3AF;
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: #9CA3AF;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid #374151;
+  color: #9CA3AF;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .app-header {
+    background-color: #111827;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logo-text {
+    color: #60A5FA;
+  }
+  
+  .main-nav a {
+    color: #D1D5DB;
+  }
+  
+  .main-nav a:hover {
+    color: #60A5FA;
+  }
+  
+  .main-nav li.active a {
+    color: #60A5FA;
+  }
+  
+  .main-nav li.active a::after {
+    background-color: #60A5FA;
+  }
+  
+  .user-menu-button:hover {
+    background-color: #1F2937;
+  }
+  
+  .user-name {
+    color: #E5E7EB;
+  }
+  
+  .user-dropdown {
+    background-color: #1F2937;
+  }
+  
+  .user-dropdown a, .user-dropdown button {
+    color: #D1D5DB;
+  }
+  
+  .user-dropdown a:hover, .user-dropdown button:hover {
+    background-color: #374151;
+  }
+  
+  .menu-divider {
+    background-color: #374151;
+  }
+  
+  .btn-login {
+    color: #60A5FA;
+    border-color: #60A5FA;
+  }
+  
+  .btn-login:hover {
+    background-color: rgba(96, 165, 250, 0.1);
+  }
+  
+  .btn-signup {
+    background-color: #60A5FA;
+    border-color: #60A5FA;
+  }
+  
+  .btn-signup:hover {
+    background-color: #3B82F6;
+    border-color: #3B82F6;
+  }
+  
+  .app-content {
+    background-color: #0F172A;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .app-header {
+    padding: 0 1rem;
+  }
+  
+  .main-nav li {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-left {
+    flex: 1;
+  }
+  
+  .main-nav {
+    display: none; /* Would require a mobile menu implementation */
+  }
+}
+
+@media (max-width: 480px) {
+  .user-name {
+    display: none;
+  }
+  
+  .auth-buttons {
+    display: none; /* Would need a mobile menu for these */
+  }
+} 

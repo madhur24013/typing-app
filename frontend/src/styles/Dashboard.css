@@ -1,0 +1,121 @@
+/* Dashboard Styles */
+
+/* Heatmap Calendar */
+.react-calendar-heatmap text {
+  font-size: 10px;
+  fill: #aaa;
+}
+
+.react-calendar-heatmap .react-calendar-heatmap-small-text {
+  font-size: 5px;
+}
+
+.react-calendar-heatmap rect:hover {
+  stroke: #555;
+  stroke-width: 1px;
+}
+
+.react-calendar-heatmap .color-empty {
+  fill: #eeeeee;
+}
+
+.react-calendar-heatmap .color-scale-1 {
+  fill: #d6e685;
+}
+
+.react-calendar-heatmap .color-scale-2 {
+  fill: #8cc665;
+}
+
+.react-calendar-heatmap .color-scale-3 {
+  fill: #44a340;
+}
+
+.react-calendar-heatmap .color-scale-4 {
+  fill: #1e6823;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .react-calendar-heatmap .color-empty {
+    fill: #2d333b;
+  }
+
+  .react-calendar-heatmap .color-scale-1 {
+    fill: #0e4429;
+  }
+
+  .react-calendar-heatmap .color-scale-2 {
+    fill: #006d32;
+  }
+
+  .react-calendar-heatmap .color-scale-3 {
+    fill: #26a641;
+  }
+
+  .react-calendar-heatmap .color-scale-4 {
+    fill: #39d353;
+  }
+}
+
+/* Achievement Cards */
+.achievement-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.achievement-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Leaderboard */
+.leaderboard-entry {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.leaderboard-entry:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Performance Charts */
+.performance-chart {
+  min-height: 300px;
+}
+
+/* Stats Cards */
+.stats-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.stats-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Streak Counter Animation */
+@keyframes streakPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.streak-counter {
+  animation: streakPulse 1s ease-in-out;
+}
+
+/* Tab Transitions */
+.tab-panel {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.tab-panel.active {
+  opacity: 1;
+  transform: translateY(0);
+} 

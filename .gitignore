@@ -1,31 +1,44 @@
-# Node.js
-node_modules/
-npm-debug.log
-yarn-debug.log
-yarn-error.log
-package-lock.json
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-# Environment variables
-.env
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# Build files
-/dist
-/build
-/.next
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# IDE/Editor specific
+# IDE
 .idea/
 .vscode/
 *.swp
 *.swo
 
-# OS specific
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+
+# Build files
+/dist
+/build
+/.next
 
 # Database
 *.sqlite

@@ -1,7 +1,7 @@
 {
   "name": "typing-app",
   "version": "1.0.0",
-  "homepage": "https://madhur24013.github.io/typing-app",
+  "homepage": "https://madhur24013.github.io/typing-app/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.0",
